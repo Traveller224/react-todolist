@@ -1,0 +1,69 @@
+﻿.ddBox {
+position:relative;
+width:35px;
+height:18px;
+margin-top:14px;
+cursor:pointer;
+transition:all 0.3s ease-out
+}
+.ddBox:after {/* Little arrow */
+content:"";
+position:absolute;
+top:50%;
+right:10px;
+border-width:4px 4px 0 4px;
+border-style:solid;
+border-color:#4cbeff transparent
+}
+.ddBox .dropdown {
+position:absolute;
+margin:0;
+padding-left:5px;
+left:0;
+right:0;
+background:#fff;
+border-radius:0 0 5px 5px;
+border:1px solid rgba(0,0,0,0.2);
+border-top:none;
+border-bottom:none;
+list-style:none;
+transition:all 0.3s ease-out;
+max-height:0;
+overflow:hidden
+}
+.ddBox .dropdown li {
+display:block;
+text-decoration:none;
+color:#333;
+transition:all 0.3s ease-out;
+border-bottom:1px solid #e6e8ea
+}
+.ddBox .dropdown li:last-of-type {
+border:none
+}
+.ddBox .dropdown li svg {
+margin-right:8px;
+position:relative;
+top:3px
+}
+.ddBox .dropdown li:hover {
+color:#57a9d9
+}
+.ddBox:hover {
+background:rgba(76, 190, 255, 0.15);
+color:white
+}
+.ddBox.active {
+border-radius:5px 5px 0 0;
+background:rgba(76, 190, 255, 0.31);
+box-shadow:none;
+border-bottom:none;
+color:white
+}
+.ddBox.active:after {
+border-color:#82d1ff transparent
+}
+.ddBox.active .dropdown {
+border-bottom:1px solid rgba(0,0,0,0.2);
+max-height:400px
+}
