@@ -1,5 +1,5 @@
 import React from "react"
-import Sprite from "./sprite"
+import Sprite from "./icons/sprite"
 import TodoInput from "./TodoInput";
 import todosData from "./todosData"
 import TodoItem from "./TodoItem"

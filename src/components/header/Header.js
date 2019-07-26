@@ -3,7 +3,7 @@ import "./Header.css"
 
 function Header(){
 	return (
-		<header className="navbar">TodoList</header>
+		<header>TodoList</header>
 	)
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Dropdown.css"
-import Icon from "./Icon"
+import Icon from "./icons/Icon"
 
 const Dropdown = ({ color, change }) => {
 	const [icon, setIcon] = useState("power");

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Icon from "./Icon"
+import Icon from "./icons/Icon"
 import Dropdown from "./Dropdown"
 
 function TodoItem(props){
@@ -22,7 +22,7 @@ function TodoItem(props){
 		<div className="todo-item">
 			<div style={{display:"flex"}}>
 				<Dropdown item={props.item} change={props.changeImportance}/>
-				<input type="checkbox" checked={props.item.completed} onChange={() => {props.handleChange(props.item.id); viewB(props.item.completed)}}/>
+				<input type="checkbox" checked={props.item.completed} onChange={(e) => {props.handleChange(props.item.id); viewB(e.target.checked);}}/>
 				<p hidden={!saveView} style={props.item.completed ? completedStyle: null}>{props.item.text}</p>
 				<input type='text' hidden={saveView} style={{width:300, height:20, margin:"11px 0"}}
 					onChange={e => {saveText(e.target.value);}}
